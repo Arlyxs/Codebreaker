@@ -7,20 +7,21 @@ print(digits[:3])
 
 guess = []
 tries = 0
-while guess != digits[:3]:
-    number = input('What is your 3 digit guess? ')
-    462
-    tries = tries + 1
+while str(guess) != digits_str:
+    number = input('What is your 3 digit guess?')
+    
+    tries +=1
     for elem in number:
         guess.append(int(elem))
-    print(guess)
+        guess_str=str(guess)
+        print(guess_str)
 
-    if guess > digits:
-        print("too high")
-    elif guess < digits:
-        print('too low')
+    if guess_str not in digits_str:
+        print("wrong guess")
+        guess.clear()
+    #elif guess_str in digits_str:
+      #  print('you win')
     else:
         print('you got it')
-
-print ('number of tries ' + tries)
-
+    
+    print ('number of tries {val} '.format(val=tries))

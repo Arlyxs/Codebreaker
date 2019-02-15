@@ -8,7 +8,7 @@ print(digits[:3])
 guess = []
 tries = 0
 number = input('What is your 3 digit guess? ')
-150
+247
 tries = tries + 1
 for elem in number:
     guess.append(int(elem))
@@ -20,5 +20,6 @@ elif guess < digits[:3]:
         print('too low')
 else:
         print('you got it')
-
+guess.clear()
 print ('number of tries ' + str(tries))
+
